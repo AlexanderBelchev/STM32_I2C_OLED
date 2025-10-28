@@ -95,7 +95,7 @@ There are also new sections to be included that do not appear in the last linker
 We replace the .vector_table section with a .isr_vector section. Otherwise the compiler makes its
 own and everything gets screwed up.
 
-    /* First sectoin */
+    /* First section */
     .isr_vector :
     {
       . = ALIGN(4);

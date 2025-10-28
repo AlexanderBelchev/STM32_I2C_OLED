@@ -1,4 +1,4 @@
-# STM32_Counter
+# STM32_I2C_OLED
 
 ### Compiling, Flashing and running
 
@@ -135,4 +135,3 @@ and thankfully there is no need to do that, because for each STM32 MCU, there is
 can be downloaded from the ST website which contains a complete vector table ready to use, located in:  
 
 ``Drivers/CMSIS/Device/ST/STM32[...]/Source/Templates/gcc/startup_stm32[...].s``  
-# STM32_I2C_OLED

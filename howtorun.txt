@@ -1,0 +1,36 @@
+To compile the project:
+    bash ./compile.sh
+To link
+    bash ./link.sh
+
+## NEW WAY ##
+Run this to compile and link the program using the Makefile
+    make
+
+If a change has been done to the code but make does not see the change,
+run 
+    make clean
+
+
+Open debugging port on localhost:4242 (by default)
+    st-util         ; The ST-LINK device has to be plugged in
+
+## NEW WAY ##
+If we don't need to be debugging, we can run
+    st-flash write main.bin 0x08000000
+        or
+    st-flash --connect-under-reset write main.bin 0x08000000
+
+Then run the debugger on main.elf (default name) in a different terminal
+    arm-none-eabi-gdb main.elf (arm-none-eabi-gdb is a softlink for /usr/bin/gdb-multiarch)
+
+Connect the debugger to the chip
+    target extended-remote :4242
+
+Finally load the program
+    load
+
+The program might be paused because of the debugger, so
+you have to call:
+    continue
+so that the program continues to run as normal
